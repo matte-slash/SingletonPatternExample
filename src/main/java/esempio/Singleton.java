@@ -2,10 +2,11 @@ package esempio;
 
 public class Singleton {
 
+    private Integer id;
 
     //Costruttore invisibile
     private Singleton(){
-        System.out.println("Nuova istanza creata");
+        id= Integer.valueOf(10);
     }
 
     private static class SingletonHelper{
@@ -18,4 +19,7 @@ public class Singleton {
         return SingletonHelper.instance;
     }
 
+    public Integer getId() {
+        return id;
+    }
 }
